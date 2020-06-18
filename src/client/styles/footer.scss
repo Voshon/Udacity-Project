@@ -1,0 +1,10 @@
+footer {
+  background-color: #0B2A5C;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 40px;
+  & > p {
+    color: #white;
+  }
+}
