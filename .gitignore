@@ -92,3 +92,5 @@ typings/
 
 # Builds
 dist/
+#secret keys
+.env
