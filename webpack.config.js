@@ -40,6 +40,7 @@ module.exports = (env = ENV.DEV) => ({
         target: "http://localhost:8000"
       }
     ],
+    verbose: true,
     hot: true,
     overlay: true,
     headers: {

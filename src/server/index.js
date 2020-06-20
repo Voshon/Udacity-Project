@@ -2,19 +2,17 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const Aylien = require("aylien_textapi");
-require("dotenv").config();
 const PORT = 8000;
-
+require("dotenv").config();
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("dist"));
 const api = new Aylien({
-  application_id: "68837b99",
-  application_key: "0c18469543844e03b477be1a884e87bc"
+  application_id: process.env.API_ID,
+  application_key: process.env.API_KEY
 });
-
 
 app.get("/", (req, res) => res.sendFile("index.html"));
 
