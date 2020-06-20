@@ -36,7 +36,7 @@ module.exports = (env = ENV.DEV) => ({
     port: "3000",
     proxy: [
       {
-        context: ["/api"],
+        context: ["/apiKey"],
         target: "http://localhost:8000"
       }
     ],
